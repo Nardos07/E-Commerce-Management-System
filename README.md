@@ -27,3 +27,36 @@ A terminal-based E-Commerce Management System developed using Java Object-Orient
 - Exception Handling
 - File Streams
 - JDBC
+  ## project structure 
+src/
+│
+├── main
+│
+├── models
+│   ├── User.java
+│   ├── Admin.java
+│   ├── Customer.java
+│   ├── Product.java
+│   ├── Cart.java
+│   ├── Order.java
+│   └── Payment.java
+│
+├── services
+│   ├── UserService.java
+│   ├── ProductService.java
+│   ├── CartService.java
+│   ├── OrderService.java
+│   └── PaymentService.java
+│
+├── database
+│   └── DBConnection.java
+│
+├── exceptions
+│   ├── ProductNotFoundException.java
+│   └── InvalidQuantityException.java
+│
+├── filehandling
+│   └── FileManager.java
+│
+└── utils
+    └── InputHelper.java
