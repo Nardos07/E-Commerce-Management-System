@@ -3,11 +3,11 @@ Terminal-Based E-Commerce Management System developed using Java OOP concepts.
 # E-Commerce Management System
 
 ## Team Members
-- Member 1 : Nardos
-- Member 2 : mikael 
-- Member 3 kidus 
+- Member 1 : Mikael
+- Member 2 : Kalkidan 
+- Member 3 kidus
 - Member 4 : rediet 
-- Member 5 : kalkidan 
+- Member 5 : Nardos
 
 ## Description
 A terminal-based E-Commerce Management System developed using Java Object-Oriented Programming concepts.
