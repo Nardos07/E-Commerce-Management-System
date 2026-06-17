@@ -5,11 +5,11 @@ public class CartItem {
     private Product product;
     private int quantity;
 
-    // Default Constructor
+
     public CartItem() {
     }
 
-    // Parameterized Constructor
+
     public CartItem(Product product, int quantity) {
         this.product = product;
         this.quantity = quantity;
