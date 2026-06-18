@@ -7,12 +7,11 @@ public class Cart {
     private int cartId;
     private ArrayList<CartItem> items;
 
-    // Default Constructor
+
     public Cart() {
         items = new ArrayList<>();
     }
 
-    // Parameterized Constructor
     public Cart(int cartId) {
         this.cartId = cartId;
         this.items = new ArrayList<>();
