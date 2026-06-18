@@ -1,16 +1,34 @@
 package models;
 
-public abstract class Payment {
+public class Payment {
 
-    protected double amount;
-
+    private int paymentId;
+    private String paymentMethod;
+    private double amount;
 
     public Payment() {
     }
 
-
-    public Payment(double amount) {
+    public Payment(int paymentId, String paymentMethod, double amount) {
+        this.paymentId = paymentId;
+        this.paymentMethod = paymentMethod;
         this.amount = amount;
+    }
+
+    public int getPaymentId() {
+        return paymentId;
+    }
+
+    public void setPaymentId(int paymentId) {
+        this.paymentId = paymentId;
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 
     public double getAmount() {
@@ -21,5 +39,9 @@ public abstract class Payment {
         this.amount = amount;
     }
 
-    public abstract void processPayment();
+    public void displayPayment() {
+        System.out.println("Payment ID: " + paymentId);
+        System.out.println("Payment Method: " + paymentMethod);
+        System.out.println("Amount: " + amount);
+    }
 }
