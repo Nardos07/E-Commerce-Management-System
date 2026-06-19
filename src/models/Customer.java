@@ -1,6 +1,7 @@
 package models;
+import java.io.Serializable;
 
-public class Customer extends User {
+public class Customer implements Serializable {
 
     private String address;
     private String phoneNumber;

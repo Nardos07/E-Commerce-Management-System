@@ -19,6 +19,7 @@ public class Order {
         this.orderId = orderId;
         this.customer = customer;
         this.items = new ArrayList<>();
+        this.totalAmount = 0;
     }
 
     public int getOrderId() {

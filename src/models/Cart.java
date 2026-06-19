@@ -35,10 +35,10 @@ public class Cart {
 
     public void removeItem(int productId) {
 
-        for (CartItem item : items) {
+        for (int i = 0; i < items.size(); i++) {
 
-            if (item.getProduct().getProductId() == productId) {
-                items.remove(item);
+            if (items.get(i).getProduct().getProductId() == productId) {
+                items.remove(i);
                 break;
             }
         }
