@@ -25,10 +25,12 @@ public class Main {
             System.out.println("\n===== E-Commerce Management System =====");
             System.out.println("1. Add Product");
             System.out.println("2. View Products");
-            System.out.println("3. Register Customer");
-            System.out.println("4. View Customers");
-            System.out.println("5. Add Payment");
-            System.out.println("6. View Payments");
+            System.out.println("3. Search Product");
+            System.out.println("4. Delete Product");
+            System.out.println("5. Register Customer");
+            System.out.println("6. View Customers");
+            System.out.println("7. Add Payment");
+            System.out.println("8. View Payments");
             System.out.println("0. Exit");
 
             System.out.print("Enter Choice: ");
@@ -71,8 +73,36 @@ public class Main {
 
                     productService.viewProducts();
                     break;
-
                 case 3:
+
+                    System.out.print("Enter Product ID: ");
+                    int searchId = InputHelper.getInt();
+
+                    Product foundProduct =
+                            productService.searchProduct(searchId);
+
+                    if (foundProduct != null) {
+                        foundProduct.displayProduct();
+                    } else {
+                        System.out.println("Product Not Found.");
+                    }
+
+                    break;
+
+                case 4:
+
+                    System.out.print("Enter Product ID to Delete: ");
+                    int deleteId = InputHelper.getInt();
+
+                    if (productService.deleteProduct(deleteId)) {
+                        System.out.println("Product Deleted Successfully.");
+                    } else {
+                        System.out.println("Product Not Found.");
+                    }
+
+                    break;
+
+                case 5:
 
                     System.out.print("Customer ID: ");
                     int customerId = InputHelper.getInt();
@@ -107,12 +137,12 @@ public class Main {
                     System.out.println("Customer Registered Successfully.");
                     break;
 
-                case 4:
+                case 6:
 
                     userService.viewCustomers();
                     break;
 
-                case 5:
+                case 7:
 
                     System.out.print("Payment ID: ");
                     int paymentId = InputHelper.getInt();
@@ -135,7 +165,7 @@ public class Main {
                     System.out.println("Payment Added Successfully.");
                     break;
 
-                case 6:
+                case 8:
 
                     paymentService.viewPayments();
                     break;
