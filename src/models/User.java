@@ -4,15 +4,15 @@ import java.io.Serializable;
 
 public class User implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
     private int id;
     private String name;
     private String email;
     private String password;
 
-
     public User() {
     }
-
 
     public User(int id, String name, String email, String password) {
         this.id = id;
@@ -20,7 +20,6 @@ public class User implements Serializable {
         this.email = email;
         this.password = password;
     }
-
 
     public int getId() {
         return id;
@@ -38,7 +37,6 @@ public class User implements Serializable {
         return password;
     }
 
-
     public void setId(int id) {
         this.id = id;
     }
@@ -54,7 +52,6 @@ public class User implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
-
 
     public void displayInfo() {
         System.out.println("ID: " + id);

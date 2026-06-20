@@ -16,7 +16,6 @@ public class InputHelper {
     }
 
     public static String getString() {
-        scanner.nextLine();
         return scanner.nextLine();
     }
 }

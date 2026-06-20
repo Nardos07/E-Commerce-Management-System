@@ -1,15 +1,16 @@
 package models;
+
 import java.io.Serializable;
 
-public class Customer implements Serializable {
+public class Customer extends User implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private String address;
     private String phoneNumber;
 
-
     public Customer() {
     }
-
 
     public Customer(int id,
                     String name,
@@ -19,6 +20,7 @@ public class Customer implements Serializable {
                     String phoneNumber) {
 
         super(id, name, email, password);
+
         this.address = address;
         this.phoneNumber = phoneNumber;
     }
