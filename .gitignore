@@ -1,0 +1,14 @@
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# Build files
+target/
+
+# Sensitive config
+database.properties
+
+# OS files
+.DS_Store
+Thumbs.db

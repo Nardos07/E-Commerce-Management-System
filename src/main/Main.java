@@ -7,6 +7,7 @@ import models.Product;
 import services.UserService;
 import services.ProductService;
 import services.PaymentService;
+import filehandling.FileManager;
 
 import utils.InputHelper;
 
@@ -17,6 +18,7 @@ public class Main {
         UserService userService = new UserService();
         ProductService productService = new ProductService();
         PaymentService paymentService = new PaymentService();
+        FileManager fileManager = new FileManager();
 
         int choice;
 
@@ -32,6 +34,8 @@ public class Main {
             System.out.println("7. Add Payment");
             System.out.println("8. View Payments");
             System.out.println("0. Exit");
+            System.out.println("9. Save Products");
+            System.out.println("10. Load Products");
 
             System.out.print("Enter Choice: ");
             choice = InputHelper.getInt();
@@ -168,6 +172,26 @@ public class Main {
                 case 8:
 
                     paymentService.viewPayments();
+                    break;
+                case 9:
+
+                    fileManager.saveData(
+                            productService.getProducts(),
+                            "products.ser"
+                    );
+
+                    System.out.println("Products saved successfully.");
+
+                    break;
+                case 10:
+
+                    Object data =
+                            fileManager.loadData("products.ser");
+
+                    if (data != null) {
+                        System.out.println("Products loaded successfully.");
+                    }
+
                     break;
 
                 case 0:

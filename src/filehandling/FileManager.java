@@ -6,13 +6,23 @@ public class FileManager {
 
     public void saveData(Object object, String fileName) {
 
-        try (
-                ObjectOutputStream out =
-                        new ObjectOutputStream(
-                                new FileOutputStream(fileName))
-        ) {
+        try {
+
+            File folder = new File("data");
+
+            if (!folder.exists()) {
+                folder.mkdir();
+            }
+
+            ObjectOutputStream out =
+                    new ObjectOutputStream(
+                            new FileOutputStream(fileName)
+                    );
 
             out.writeObject(object);
+            out.close();
+
+            System.out.println("Data saved successfully.");
 
         } catch (IOException e) {
 
@@ -25,13 +35,20 @@ public class FileManager {
 
     public Object loadData(String fileName) {
 
-        try (
-                ObjectInputStream in =
-                        new ObjectInputStream(
-                                new FileInputStream(fileName))
-        ) {
+        try {
 
-            return in.readObject();
+            ObjectInputStream in =
+                    new ObjectInputStream(
+                            new FileInputStream(fileName)
+                    );
+
+            Object object = in.readObject();
+
+            in.close();
+
+            System.out.println("Data loaded successfully.");
+
+            return object;
 
         } catch (IOException | ClassNotFoundException e) {
 
