@@ -656,27 +656,11 @@ ecommerce_db
 
 The project was developed collaboratively by a team of five members using GitHub branches.
 
-## Team Leader and Integration Developer
-
-**Nardos Demewez**
-
-Responsibilities:
-
-- Project architecture and design
-- Main.java development and integration
-- Payment module implementation
-- Database integration (JDBC + MySQL)
-- File handling implementation
-- Exception handling implementation
-- Project testing and debugging
-- GitHub management and branch merging
-- Final documentation and README preparation
-
----
 
 ## Contributors
 
-### Contributor 1
+### Contributor 1 :- Michael 
+
 
 **Branch:** `user-module`
 
@@ -686,8 +670,11 @@ Responsibilities:
 - Admin.java
 - Customer.java
 - UserService.java
+- Project architecture and design
+- Main.java development and integration
+- Payment module implementation
 
-### Contributor 2
+### Contributor 2  :- Kalkidan
 
 **Branch:** `product-module`
 
@@ -696,7 +683,7 @@ Responsibilities:
 - Product.java
 - ProductService.java
 
-### Contributor 3
+### Contributor 3   :- Kidus
 
 **Branch:** `cart-module`
 
@@ -706,7 +693,7 @@ Responsibilities:
 - CartItem.java
 - CartService.java
 
-### Contributor 4
+### Contributor 4   :- Rediet
 
 **Branch:** `order-module`
 
@@ -716,7 +703,7 @@ Responsibilities:
 - OrderItem.java
 - OrderService.java
 
-### contributor 5
+### contributor 5  :- Nardos 
 
 **Branch:** `payment-module`
 
@@ -731,6 +718,12 @@ Responsibilities:
 - InvalidQuantityException.java
 - Main.java
 - System integration
+-  Database integration (JDBC + MySQL)
+- File handling implementation
+- Exception handling implementation
+- Project testing and debugging
+- - GitHub management and branch merging
+- Final documentation and README preparation
 
 ---
 
