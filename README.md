@@ -460,7 +460,15 @@ CREATE DATABASE ecommerce_db;
 ---
 
 ## Table Used
+##Database Tables
 
+- products
+- customers
+- orders
+- order_items
+- payments
+- carts
+- cart_items
 ### products
 
 ```sql
